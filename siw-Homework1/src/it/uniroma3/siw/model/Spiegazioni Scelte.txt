@@ -1,0 +1,17 @@
+
+
+   POLITICHE DI FETCH
+   
+   Non ho ritenuto opportuno modificare le politiche.
+   La possibile modifica che eventualmete avre inserito sarebbe stata modificare Allievi-->Corso percio un ManyToMany
+   da Lazy a Eager perche mi interessa quando richiamo un allievo sapere in che corso partecipa ma mi sono reso conto
+   che in caso di molti dati questo sarebbe stato un costo troppo elevato.
+   
+   
+   
+   CASCADE
+   
+   Docente-->Corso ho considerato che una volta creato il docente voglio che vengano resi persistenti i corsi a sua volta
+                   se elimino il docente allora il corso smette di essitere perche si basava su quel professore 
+                   
+   Corso-->Docente Quando crea il Corso rendo persistente il Docente 

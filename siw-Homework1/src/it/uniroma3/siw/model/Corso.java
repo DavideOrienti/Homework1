@@ -3,6 +3,7 @@ package it.uniroma3.siw.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -27,7 +28,7 @@ public class Corso {
 	@ManyToMany
 	private List<Allievi> allievi;
 	
-	@ManyToOne
+	@ManyToOne (cascade = {CascadeType.PERSIST})
 	private Docente docente;
 	
 	
