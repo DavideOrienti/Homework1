@@ -2,8 +2,8 @@
 
    POLITICHE DI FETCH
    
-   Non ho ritenuto opportuno modificare le politiche.
-   La possibile modifica che eventualmete avre inserito sarebbe stata modificare Allievi-->Corso percio un ManyToMany
+   Non ho ritenuto opportuno modificare le politiche di fetch .
+   La possibile modifica che eventualmete avrei inserito sarebbe stata modificare Allievi-->Corso percio un ManyToMany
    da Lazy a Eager perche mi interessa quando richiamo un allievo sapere in che corso partecipa ma mi sono reso conto
    che in caso di molti dati questo sarebbe stato un costo troppo elevato.
    
@@ -12,14 +12,15 @@
    CASCADE
    
    Docente-->Corso ho considerato che una volta creato il docente voglio che vengano resi persistenti i corsi a sua volta
-                   se elimino il docente allora il corso smette di essitere perche si basava su quel professore 
+                   se elimino il docente allora il corso smette di essitere perche ho ragionato sul fatto che il corso è
+                   tenuto da quel singolo docente e non puo essere sostituito 
                    
    Corso-->Docente Quando crea il Corso rendo persistente il Docente 
    
-   Allievi-->Corso Non ho ritenuto opportuno inserire nessu cascade da allievi ed corso perche penso che un Allievo puo anche non
+   Allievi-->Corso Non ho ritenuto opportuno inserire nessun cascade da allievi ed corso perche penso che un Allievo puo anche non
                    essere obbligato a partecipare ad un corso ma essere semplicemente un dipendente della Societa e Quindi la creazione
                    o eliminazione di un allievo non influiscono sul Corso
    
-   Corso-->Allievi Non ho inserito Cascade da Corso ad Allievi perche essent un collegamento ManytoMany penso che un singolo Corso
-                   non possa Modificare un Allievo es se un corso viene eliminato gli allievi possono esistere ancora perche possono 
+   Corso-->Allievi Non ho inserito Cascade da Corso ad Allievi perche essendo un collegamento ManytoMany penso che un singolo Corso
+                   non possa Modificare un Allievo e se un corso viene eliminato gli allievi possono esistere ancora perche possono 
                    frequentare altri corsi 
