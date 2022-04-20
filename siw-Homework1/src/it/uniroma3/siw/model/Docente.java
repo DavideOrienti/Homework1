@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Docente {
 
-	//CAMBIARE PARTITA IVA COME ID E MEETERE NOME E COGNOME
+	
 	
 	
 	@Id
