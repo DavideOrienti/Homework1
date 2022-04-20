@@ -34,7 +34,8 @@ public class Docente {
 	
 	
 	
-	@OneToMany (mappedBy = "docente" ,cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+	@OneToMany (mappedBy = "docente" ,cascade = {CascadeType.PERSIST,CascadeType.REMOVE})  
+	
 	private List<Corso> corso;
 	
 

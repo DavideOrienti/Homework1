@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import javax.persistence.ManyToMany;
-
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 
@@ -40,7 +40,7 @@ public class Allievi {
 	private String email;
 	
 	
-	@OneToOne
+	@ManyToOne
 	private Societa societa;
 	
 	@ManyToMany (mappedBy = "allievi")

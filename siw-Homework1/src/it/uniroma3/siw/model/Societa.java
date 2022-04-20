@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Societa {
 
-	//Vedere se creare una classe solo indirizzo
+	
 	
 	@Id
 	@Column(nullable = false)
